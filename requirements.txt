@@ -1,0 +1,14 @@
+numpy
+scipy
+opencv-python
+rawpy
+argparse
+scikit-learn
+tqdm
+imageio
+ipykernel
+matplotlib
+torch
+torchaudio
+torchvision
+git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
