@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES=0 python scripts/train5d.py \
+python scripts/train5d.py \
     --config-path configs/iphone12pro-wide.json \
     --data-path data/iphone12pro/data-downsampled-4x.npz \
     --results-path _results/downsample-4x/ \

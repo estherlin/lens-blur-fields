@@ -1,66 +1,82 @@
-# blur field code release
-Code release for blur fields paper
+# Learning Lens Blur Fields
+Official code release for [Learning Lens Blur Fields](https://arxiv.org/abs/2310.11535). For additional details, please refer to:
 
-## Getting started on GPU
-### Getting onto GPUs
-
-Step 1: get onto a lab computer (apollo)
-```
-ssh lin@apollo.dgp.toronto.edu
-```
-
-Step 2: get onto a gpu (triton/tyche/belle, etc.)
-```
-ssh triton.dgpsrv.sandbox
-```
-
-### File locations
-
-Where the repo should be stored:
-Put everything you generate in the following directory:
+If you use parts of this work, or otherwise take inspiration from it, please considering citing our paper:
 
 ```
-/scratch/year/lin/release/
+@misc{lin2023learning,
+      title={Learning Lens Blur Fields}, 
+      author={Esther Y. H. Lin and 
+        Zhecheng Wang and 
+        Rebecca Lin and 
+        Daniel Miau and 
+        Florian Kainz and 
+        Jiawen Chen and 
+        Xuaner Cecilia Zhang and 
+        David B. Lindell and 
+        Kiriakos N. Kutulakos},
+      year={2023},
+      eprint={2310.11535},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV}
+}
 ```
 
-Here is the conda environment that you can directly use (no need to build requirements.txt yourself):
+## Directory Structure
+
 ```
-/scratch/ondemand27/lin/envs/psfs/
+blur-fields
+  ├── models  
+  │   └── iphone12pro0-wide.pth // iphone 12 pro model 0 in paper
+  │   └── iphone12pro1-wide.pth // iphone 12 pro model 1 in paper
+  ├── config
+  │   ├── iphone12pro-wide.json  // MLP configuration
+  ├── util
+  │   └── utils.py  // misc helper functions 
+  │   └── preprocess.py  // helper functions (e.g. homographies, centre detections)
+  │   └── generate_random_pattern.py  // generates random binary noise images
+  ├── run
+  │   └── download_data.sh  // for iphone 12 pro wide used in paper
+  │   └── train_iphone12pro_wide.sh  // for iphone 12 pro wide used in paper
+  ├── notebooks
+  │   └── preprocess_iphone12pro.ipynb  // demo of preprocessing pipeline
+  │   └── visualize_blur_field.ipynb  // how to extract psfs after training
+  ├── README.md  // <- You Are Here
+  ├── requirements.txt  // package requirements
+  └── train.py  // training code for 5D blur field
 ```
 
-Here’s how to activate when you get onto the cluster:
-```
-source ~/.bashrc
-conda activate /scratch/ondemand27/lin/envs/psfs/
-```
+## Getting Started
 
-### Existing data to use for training
-There is already some existing data in the repo directory that we can use for testing. It is located at:
-```
-/scratch/year/lin/release/data/iphone12pro/
-```
+### Requirements
 
-### Saving temporary results:
-We can save temporary results to disk at:
-```
-/scratch/year/lin/release/_results/
-```
+This code requires tiny-cuda-nn, see [NVlabs/tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn) for installation instructions (we used version 1.6).
 
-## Setup
+### Data
 
-To do a test training run, 
-```
-cd release/
-bash run/train_iphone12pro_wide.sh
-```
+#### Downloading iPhone 12 Pro Data
 
-## Preprocessing
+You can download the iPhone 12 pro device 0 wide lens data used in the paper here:
 
-### iPhone pipeline
-1. Take focal stacks of each pattern. Each focal stack will be saved in a separate folder
-2. Edit folder names to correspond to the pattern
-3. Upload main experiment directory to blur-fields/iphone12pro<device #>-<lens>
-4. Make entry of experiment params in Notion
-5. Extract data from individual images into `.npy` form by running `bash run/process_iphone.sh` in `learn-psfs/`. This create a new folder called `processed` in your experiment folder that stores all of the processed results. _IMPORTANT_: Make sure that no pixels are saturated in the captures!!! Warning messages may be printing on the terminal. 
+1.  Full resolution (slow)
+2.  4x downsampled (fast)
+
+#### Using Your Own Data
+
+##### Capturing
+
+TODO
+
+##### Preprocessing (preparing data for training)
+
+TODO
+
+### Training
+
+A training example using `train.py` can be found in `run/train_iphone12pro_wide.sh`. 
 
 
+
+## Acknowledgements
+
+We thank Wenzheng Chen for providing discussions and the script for generating random noise patterns. 

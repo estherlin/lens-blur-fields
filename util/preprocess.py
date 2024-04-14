@@ -125,7 +125,6 @@ def load_data(DATA_DIR, distances, patterns, lens_positions, burst_size):
     return data
 
 
-##### From constrained homography ####
 def binarize(array1, array2):
     binary_array = (array1 > array2).astype(np.uint8)
     return binary_array
