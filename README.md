@@ -59,7 +59,7 @@ This code requires tiny-cuda-nn, see [NVlabs/tiny-cuda-nn](https://github.com/NV
 
 #### Downloading iPhone 12 Pro Data
 
-You can download the iPhone 12 pro device 0 wide lens data used in the paper here:
+You can download the iPhone 12 pro device 0 wide lens data used in the paper [here](https://drive.google.com/drive/folders/1zf2p2Bj_Jxhq4-smq1AsnEwlRfKJH0qC?usp=sharing). We include:
 
 1.  4x downsampled processed iphone 12 pro wide lens data (1.06GB): can directly be used in colab demos
 2.  full resolution processed iphone 12 pro wide lens data (18.3GB)
