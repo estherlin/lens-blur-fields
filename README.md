@@ -69,6 +69,8 @@ TODO
 
 ##### Preprocessing (preparing data for training)
 
+![preprocessing](imgs/method.png)
+
 TODO
 
 ### Training
