@@ -55,6 +55,23 @@ blur-fields
 
 This code requires tiny-cuda-nn, see [NVlabs/tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn) for installation instructions (we used version 1.6). Package requirements as of October 2023 are in `\requirements.txt`.
 
+```bash
+# Make a conda environment.
+conda create --name psfs python=3.10
+conda activate psfs
+
+# Prepare pip.
+conda install pip
+pip install --upgrade pip
+
+# Install requirements.
+pip install -r requirements.txt
+
+# Install tiny-cude-nn separately
+# Installation as of Oct. 2023, you can also get it from their repo
+pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
+```
+
 ### Data
 
 #### Downloading iPhone 12 Pro Data
