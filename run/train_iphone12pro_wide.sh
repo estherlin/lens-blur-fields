@@ -1,7 +1,7 @@
 python scripts/train5d.py \
     --config-path configs/iphone12pro-wide.json \
-    --data-path data/iphone12pro/data-downsampled-4x.npz \
-    --results-path _results/downsample-4x/ \
+    --data-path data/processed-iphone12pro-downsampled-4x.npz \
+    --results-path checkpoints/downsample-4x/ \
     --dims xyuvp \
     --training-stride 50 \
     --rendering-stride 50 \

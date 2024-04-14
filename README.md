@@ -26,23 +26,24 @@ If you use parts of this work, or otherwise take inspiration from it, please con
 
 ```
 blur-fields
-  ├── models  
-  │   └── iphone12pro0-wide.pth // iphone 12 pro model 0 in paper
-  │   └── iphone12pro1-wide.pth // iphone 12 pro model 1 in paper
   ├── config
   │   ├── iphone12pro-wide.json  // MLP configuration
   ├── checkpoints  
-  │   └── // folder for network checkpoints
+  │   └── // folder for blur field networkcheckpoints
+  ├── data
+  │   └── // folder for unprocessed and training data
+  ├── models  
+  │   └── iphone12pro0-wide.pth // iphone 12 pro model 0 in paper
+  │   └── iphone12pro1-wide.pth // iphone 12 pro model 1 in paper
+  ├── notebooks
+  │   └── preprocess_iphone12pro.ipynb  // demo of preprocessing pipeline
+  │   └── visualize_blur_field.ipynb  // how to extract psfs after training
+  ├── run
+  │   └── train_iphone12pro_wide.sh  // for iphone 12 pro wide used in paper
   ├── util
   │   └── utils.py  // misc helper functions 
   │   └── preprocess.py  // helper functions (e.g. homographies, centre detections)
   │   └── generate_random_pattern.py  // generates random binary noise images
-  ├── run
-  │   └── download_data.sh  // for iphone 12 pro wide used in paper
-  │   └── train_iphone12pro_wide.sh  // for iphone 12 pro wide used in paper
-  ├── notebooks
-  │   └── preprocess_iphone12pro.ipynb  // demo of preprocessing pipeline
-  │   └── visualize_blur_field.ipynb  // how to extract psfs after training
   ├── README.md  // <- You Are Here
   ├── requirements.txt  // package requirements
   └── train.py  // training code for 5D blur field
@@ -63,6 +64,8 @@ You can download the iPhone 12 pro device 0 wide lens data used in the paper her
 1.  4x downsampled processed iphone 12 pro wide lens data (1.06GB): can directly be used in colab demos
 2.  full resolution processed iphone 12 pro wide lens data (18.3GB)
 3.  unprocessed calibration pattern captures (1.75GB): for demoing the preprocessing pipeline
+
+Place all data in the `data/` folder.
 
 #### Preprocessing Your Own Data
 
