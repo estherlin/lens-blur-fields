@@ -58,8 +58,8 @@ This code requires tiny-cuda-nn, see [NVlabs/tiny-cuda-nn](https://github.com/NV
 
 You can download the iPhone 12 pro device 0 wide lens data used in the paper here:
 
-1.  4x downsampled (fast): used in colab demos
-2.  Full resolution (slow)
+1.  4x downsampled processed data: can directly be used in colab demos
+2.  ​
 
 #### Using Your Own Data
 
