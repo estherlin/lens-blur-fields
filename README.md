@@ -59,19 +59,11 @@ This code requires tiny-cuda-nn, see [NVlabs/tiny-cuda-nn](https://github.com/NV
 You can download the iPhone 12 pro device 0 wide lens data used in the paper here:
 
 1.  4x downsampled processed data: can directly be used in colab demos
-2.  ​
+2.  unprocessed calibration pattern captures: for demoing the preprocessing pipeline
 
-#### Using Your Own Data
+#### Preprocessing Your Own Data
 
-##### Capturing
-
-TODO
-
-##### Preprocessing (preparing data for training)
-
-![preprocessing](imgs/method.png)
-
-TODO
+See `notebooks/preprocess_data.ipynb` for a demo of how to preprocess data.
 
 ### Training
 

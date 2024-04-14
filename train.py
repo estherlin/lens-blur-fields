@@ -106,13 +106,6 @@ def bayerfy(tensor):
     mosaic[:, 1::2, 1::2] = tensor[:, 1::2, 1::2, 3]
     return mosaic
 
-def bayerfy_stack(tensor):
-    num_pat, num_pos, h, w, c = tensor.shape
-    mosaic = torch.zeros((num_pat, num_pos, h, w), device=tensor.device, dtype=tensor.dtype)
-    for i in range(num_pos):
-        mosaic[:,i,...] = bayerfy(tensor[:,i,...])
-    return mosaic
-
 def plot_grid_kerns(model, num_h, num_w, full_h, full_w, num_p, N, pad, save_path, n_channels, num_fourier_features=0):
     
     # Get grid
