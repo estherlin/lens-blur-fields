@@ -31,6 +31,8 @@ blur-fields
   │   └── iphone12pro1-wide.pth // iphone 12 pro model 1 in paper
   ├── config
   │   ├── iphone12pro-wide.json  // MLP configuration
+  ├── checkpoints  
+  │   └── // folder for network checkpoints
   ├── util
   │   └── utils.py  // misc helper functions 
   │   └── preprocess.py  // helper functions (e.g. homographies, centre detections)
@@ -50,7 +52,7 @@ blur-fields
 
 ### Requirements
 
-This code requires tiny-cuda-nn, see [NVlabs/tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn) for installation instructions (we used version 1.6).
+This code requires tiny-cuda-nn, see [NVlabs/tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn) for installation instructions (we used version 1.6). Package requirements as of October 2023 are in `\requirements.txt`.
 
 ### Data
 
@@ -58,8 +60,9 @@ This code requires tiny-cuda-nn, see [NVlabs/tiny-cuda-nn](https://github.com/NV
 
 You can download the iPhone 12 pro device 0 wide lens data used in the paper here:
 
-1.  4x downsampled processed data: can directly be used in colab demos
-2.  unprocessed calibration pattern captures: for demoing the preprocessing pipeline
+1.  4x downsampled processed iphone 12 pro wide lens data (1.06GB): can directly be used in colab demos
+2.  full resolution processed iphone 12 pro wide lens data (18.3GB)
+3.  unprocessed calibration pattern captures (1.75GB): for demoing the preprocessing pipeline
 
 #### Preprocessing Your Own Data
 

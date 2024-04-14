@@ -39,5 +39,4 @@ data/*
 .idea
 
 # project specific
-data/*
-_results/*
+*.npz
