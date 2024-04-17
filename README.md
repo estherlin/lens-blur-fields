@@ -53,7 +53,7 @@ blur-fields
 
 ### Requirements
 
-This code requires tiny-cuda-nn, see [NVlabs/tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn) for installation instructions (we used version 1.6). Package requirements as of October 2023 are in `\requirements.txt`.
+This code requires tiny-cuda-nn, see [NVlabs/tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn) for installation instructions (we used version 1.6). Package requirements as of October 2023 are in `requirements.txt`.
 
 ```bash
 # Make a conda environment.
