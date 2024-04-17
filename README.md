@@ -90,7 +90,11 @@ See `notebooks/preprocess_data.ipynb` for a demo of how to preprocess data.
 
 ### Training
 
-A training example using `train.py` can be found in `run/train_iphone12pro_wide.sh`. 
+A training example using `train.py` can be found in `run/train_iphone12pro_wide.sh`. To train, run
+
+```bash
+bash run/train_iphone12pro_wide.sh
+```
 
 ## Acknowledgements
 
