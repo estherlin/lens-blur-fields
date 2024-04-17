@@ -1,5 +1,5 @@
 # Learning Lens Blur Fields
-Official code release for [Learning Lens Blur Fields](https://arxiv.org/abs/2310.11535). For additional details, please refer to:
+Official code release for [Learning Lens Blur Fields](https://arxiv.org/abs/2310.11535). For additional details, please refer to the paper. 
 
 If you use parts of this work, or otherwise take inspiration from it, please considering citing our paper:
 
