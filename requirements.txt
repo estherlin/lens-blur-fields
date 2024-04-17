@@ -11,3 +11,5 @@ matplotlib
 torch
 torchaudio
 torchvision
+imath
+openexr
